@@ -1,0 +1,54 @@
+name = "018.465 Riser"
+part_number = "018.465"
+mount_style = "american_precision"
+
+# Available segment lengths in mm (inch equivalents)
+# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
+available_lengths = [
+    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
+    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
+    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
+    406.4, 406.4, 457.2, 457.2, 508, 508,
+]
+
+notes = "American Precision Style riser"
+
+# Dimensions derived from features (no explicit scalar fields needed):
+# - total_height = mount_a_shoulder.Y (50.8mm = 2")
+# - slot_depth = mount_b_tongue.Y (15.875mm = 5/8")
+# - tang_height = mount_a_tongue.Y - mount_a_shoulder.Y (15.875mm = 5/8")
+
+# Explicit features (risers have 4 mount features: mount_a_*, mount_b_*)
+# A-side = tang end (goes toward holder)
+[[features]]
+id = "mount_a_shoulder"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 50.8], angle = 90.0 } }
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+
+[[features]]
+id = "mount_a_tongue"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 66.675], angle = 90.0 } }
+family = "american_precision"
+style = "tongue"
+gender = "male"
+
+# B-side = slot end (receives punch/die)
+[[features]]
+id = "mount_b_shoulder"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 0.0], angle = 270.0 } }
+family = "american_precision"
+style = "shoulder"
+gender = "female"
+
+[[features]]
+id = "mount_b_tongue"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 15.875], angle = 270.0 } }
+family = "american_precision"
+style = "tongue"
+gender = "female"

@@ -1,0 +1,79 @@
+name = "T028.465 Riser"
+mount_style = "american_precision"
+# Available segment lengths in mm (inch equivalents)
+# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
+available_lengths = [
+    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
+    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
+    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
+    406.4, 406.4, 457.2, 457.2, 508, 508,
+]
+notes = "American Precision Style riser"
+
+[[features]]
+id = "mount_a_shoulder"
+role = "mount"
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    -0.394,
+    50.8,
+]
+angle = 90.0
+
+[[features]]
+id = "mount_a_tongue"
+role = "mount"
+family = "american_precision"
+style = "tongue"
+gender = "male"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    -0.394,
+    66.675,
+]
+angle = 90.0
+
+[[features]]
+id = "mount_b_shoulder"
+role = "mount"
+family = "american_precision"
+style = "shoulder"
+gender = "female"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    0.0,
+    0.0,
+]
+angle = 270.0
+
+[[features]]
+id = "mount_b_tongue"
+role = "mount"
+family = "american_precision"
+style = "tongue"
+gender = "female"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    0.0,
+    15.875,
+]
+angle = 270.0

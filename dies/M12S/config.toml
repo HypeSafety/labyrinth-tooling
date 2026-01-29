@@ -1,0 +1,116 @@
+name = "V-Die 88° M12S"
+style = "v_die"
+mount_style = "american_precision"
+mount_type = "t_slot"
+# Available segment lengths in mm (inch equivalents)
+# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
+available_lengths = [
+    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
+    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
+    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
+    406.4, 406.4, 457.2, 457.2, 508, 508,
+]
+
+[[features]]
+id = "v_opening"
+role = "functional"
+
+[features.geometry]
+type = "offset"
+
+[features.geometry.data]
+start = [
+    -6.0,
+    0.0,
+]
+end = [
+    6.0,
+    0.0,
+]
+angle = 90.0
+
+[[features]]
+id = "v_angle"
+role = "reference"
+
+[features.geometry]
+type = "angle"
+
+[features.geometry.data]
+angle = 88.0
+
+[[features]]
+id = "v_tip_radius"
+role = "reference"
+
+[features.geometry]
+type = "arc"
+
+[features.geometry.data]
+center = [
+    0.0,
+    -5.21,
+]
+radius = 1.0
+
+[[features]]
+id = "shoulder_radius"
+role = "reference"
+
+[features.geometry]
+type = "arc"
+
+[features.geometry.data]
+center = [
+    -6.636712224314579,
+    -1.5,
+]
+radius = 1.5
+
+[[features]]
+id = "mount_base"
+role = "reference"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    0.0,
+    -100.0,
+]
+angle = 270.0
+
+[[features]]
+id = "mount_shoulder"
+role = "mount"
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    0.0,
+    -100.0,
+]
+angle = 270.0
+
+[[features]]
+id = "mount_tongue"
+role = "mount"
+family = "american_precision"
+style = "tongue"
+gender = "male"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    0.0,
+    -100.0,
+]
+angle = 270.0

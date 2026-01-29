@@ -1,0 +1,52 @@
+name = "V-Die 88° 20ga"
+style = "v_die"
+mount_style = "american_precision"
+mount_type = "t_slot"
+notes = "American Precision Style V-die for 20 gauge material"
+
+# Available segment lengths in mm (inch equivalents)
+# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
+available_lengths = [
+    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
+    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
+    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
+    406.4, 406.4, 457.2, 457.2, 508, 508,
+]
+
+# Functional features
+[[features]]
+id = "v_opening"
+role = "functional"
+geometry = { type = "offset", data = { start = [0.0, 0.0], end = [23.81, 0.0], angle = 90.0 } }
+
+[[features]]
+id = "v_angle"
+role = "reference"
+geometry = { type = "angle", data = { angle = 88.0 } }
+
+[[features]]
+id = "v_tip_radius"
+role = "reference"
+geometry = { type = "arc", data = { center = [11.91, -55.34], radius = 0.794 } }
+
+[[features]]
+id = "shoulder_radius"
+role = "reference"
+geometry = { type = "arc", data = { center = [6.94, -0.391], radius = 0.391 } }
+
+# Mount features
+[[features]]
+id = "mount_shoulder"
+role = "mount"
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+geometry = { type = "ray", data = { position = [11.91, -56.13], angle = 270.0 } }
+
+[[features]]
+id = "mount_tongue"
+role = "mount"
+family = "american_precision"
+style = "tongue"
+gender = "male"
+geometry = { type = "ray", data = { position = [11.91, -72.0], angle = 270.0 } }

@@ -1,0 +1,38 @@
+# 304 Stainless Steel - Austenitic stainless steel
+#
+# Stainless steel has significantly higher springback than mild steel
+# due to higher yield strength and work hardening characteristics.
+#
+# These values are typical for air bending with standard V-die ratios (8-12).
+# 304SS work hardens during forming, so springback increases with:
+# - Sharper bend radii
+# - Multiple forming operations
+# - Cold working history
+#
+# For critical applications, calibrate against test bends.
+
+[material]
+name = "304 Stainless Steel"
+density_kg_m3 = 8000.0
+yield_strength_mpa = 215.0
+tensile_strength_mpa = 505.0
+
+# Thin gauge (1-3mm)
+[springback]
+thickness_range_mm = [1.0, 3.0]
+# Rotation angles (matching BendGeometry.angle convention)
+angle_values_deg = [60.0, 90.0, 120.0]
+# Stainless has ~2x the springback of mild steel
+overbend_values_deg = [3.0, 4.0, 5.0]
+
+# Medium gauge (3-6mm)
+[[springback_tables]]
+thickness_range_mm = [3.0, 6.0]
+angle_values_deg = [60.0, 90.0, 120.0]
+overbend_values_deg = [2.5, 3.5, 4.5]
+
+# Heavy gauge (6-10mm)
+[[springback_tables]]
+thickness_range_mm = [6.0, 10.0]
+angle_values_deg = [60.0, 90.0, 120.0]
+overbend_values_deg = [2.0, 3.0, 4.0]

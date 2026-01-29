@@ -1,0 +1,17 @@
+[[sets]]
+id = "set_0672M_0830M"
+name = "Gooseneck + 12mm V"
+punch_id = "0672M"
+die_id = "0830M"
+notes = "General purpose set for 1-2mm steel"
+
+[[sets]]
+id = "std"
+name = "std"
+punch_id = "P2R_88"
+die_id = "M24_88"
+punch_riser_ids = ["018465"]
+die_riser_ids = ["028465"]
+punch_holder_id = "018455"
+die_holder_id = "die_holder_sample"
+notes = "Standard Die set"

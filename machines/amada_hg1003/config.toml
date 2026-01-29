@@ -1,0 +1,68 @@
+# Amada HG-1003 Press Brake Configuration
+#
+# This is a sample machine configuration for an Amada HG-1003.
+# Actual specifications should be verified against the machine's documentation.
+
+id = "amada_hg1003"
+brand = "Amada"
+model = "HG-1003"
+
+# Beam geometry
+bending_length_mm = 3060.0
+origin = "center"           # X=0 at beam center
+
+# Capacity
+stroke_mm = 250.0
+max_tonnage_kn = 1000.0     # 100 metric tons
+tonnage_per_meter_kn = 330.0
+
+# Ways (uprights) - exclusion zones where tooling cannot be placed
+# These create gaps in sectional tooling layouts
+[[ways]]
+x_position_mm = -1020.0     # Left upright
+width_mm = 80.0
+
+[[ways]]
+x_position_mm = 1020.0      # Right upright
+width_mm = 80.0
+
+# Axis mapping (internal name -> display name)
+[[axes]]
+internal_name = "y1"
+display_name = "Y"
+axis_type = "ram"
+
+[[axes]]
+internal_name = "y2"
+display_name = "Y2"
+axis_type = "ram"
+
+[[axes]]
+internal_name = "x1"
+display_name = "X"
+axis_type = "back_gauge_x"
+
+[[axes]]
+internal_name = "x2"
+display_name = "X2"
+axis_type = "back_gauge_x"
+
+[[axes]]
+internal_name = "r1"
+display_name = "R"
+axis_type = "back_gauge_r"
+
+[[axes]]
+internal_name = "r2"
+display_name = "R2"
+axis_type = "back_gauge_r"
+
+[[axes]]
+internal_name = "z1"
+display_name = "Z"
+axis_type = "back_gauge_z"
+
+[[axes]]
+internal_name = "z2"
+display_name = "Z2"
+axis_type = "back_gauge_z"

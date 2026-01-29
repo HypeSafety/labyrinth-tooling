@@ -1,0 +1,38 @@
+# A36 Mild Steel - Common structural steel
+#
+# Springback values are typical for air bending with standard V-die ratios (8-12).
+# These are approximate values - actual springback varies with:
+# - Grain direction
+# - Material hardness variation
+# - Die opening (V/T ratio)
+# - Bend radius
+#
+# For critical applications, calibrate against test bends.
+
+[material]
+name = "A36 Mild Steel"
+density_kg_m3 = 7850.0
+yield_strength_mpa = 250.0
+tensile_strength_mpa = 400.0
+
+# Thin gauge (1-3mm) - upper bound exclusive
+[[springback_tables]]
+thickness_range_mm = [1.0, 3.0]
+# Rotation angles (matching BendGeometry.angle convention)
+# 60° = obtuse bend, 90° = L-bracket, 120° = acute bend
+angle_values_deg = [60.0, 90.0, 120.0]
+# Overbend amounts - mild steel has moderate springback
+overbend_values_deg = [1.5, 2.0, 2.5]
+
+# Medium gauge (3-6mm) - upper bound exclusive
+[[springback_tables]]
+thickness_range_mm = [3.0, 6.0]
+angle_values_deg = [60.0, 90.0, 120.0]
+# Thicker material has slightly less springback
+overbend_values_deg = [1.2, 1.6, 2.0]
+
+# Heavy gauge (6-12mm)
+[[springback_tables]]
+thickness_range_mm = [6.0, 12.0]
+angle_values_deg = [60.0, 90.0, 120.0]
+overbend_values_deg = [0.8, 1.2, 1.5]

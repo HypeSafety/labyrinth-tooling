@@ -1,0 +1,48 @@
+name = "028.501 Punch Holder"
+part_number = "028.501"
+position = "upper"
+tooling_style = "american_precision"
+
+# Clamping
+clamping_type = "hydraulic"
+
+# Available lengths in mm (inch equivalents)
+# 20"=508, 24"=609.6, 30"=762, 36"=914.4, 40"=1016, 48"=1219.2, 60"=1524, 72"=1828.8, etc.
+available_lengths = [
+    508, 508, 609.6, 609.6, 762, 762, 914.4, 914.4,
+    1016, 1016, 1219.2, 1219.2, 1524, 1828.8, 2133.6, 2438.4,
+    2540, 3048,
+]
+
+notes = "American Precision Style punch holder"
+
+# Dimensions derived from features (no explicit scalar fields needed):
+# - total_height = mount_ram.Y (101.6mm = 4")
+# - slot_depth = mount_tongue.Y (15.875mm = 5/8")
+
+# Mount features
+# Top side connects to machine ram
+[[features]]
+id = "mount_ram"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 101.6], angle = 90.0 } }
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+
+# Bottom side slot receives punch or riser
+[[features]]
+id = "mount_shoulder"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 0.0], angle = 270.0 } }
+family = "american_precision"
+style = "shoulder"
+gender = "female"
+
+[[features]]
+id = "mount_tongue"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 15.875], angle = 270.0 } }
+family = "american_precision"
+style = "tongue"
+gender = "female"

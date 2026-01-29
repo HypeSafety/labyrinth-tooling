@@ -1,0 +1,40 @@
+name = "Stepped Finger 2-Contact"
+style = "stepped"
+contact_count = 2
+default_quantity = 2
+
+[[features]]
+id = "contact_surface_0"
+role = "functional"
+
+[features.geometry]
+type = "offset"
+
+[features.geometry.data]
+start = [
+    25.0,
+    24.0,
+]
+end = [
+    25.0,
+    12.0,
+]
+angle = 0.0
+
+[[features]]
+id = "contact_surface_1"
+role = "functional"
+
+[features.geometry]
+type = "offset"
+
+[features.geometry.data]
+start = [
+    0.0,
+    12.0,
+]
+end = [
+    0.0,
+    0.0,
+]
+angle = 0.0

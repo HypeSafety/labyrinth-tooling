@@ -1,0 +1,57 @@
+name = "V-Die 60° M40"
+style = "v_die"
+
+# Available segment lengths in mm (inch equivalents)
+# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
+available_lengths = [
+    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
+    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
+    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
+    406.4, 406.4, 457.2, 457.2, 508, 508,
+]
+
+# Functional features
+# v_depth ≈ (v_opening/2) / tan(angle/2) = 20 / tan(30°) ≈ 34.64mm
+
+[[features]]
+id = "v_angle"
+role = "reference"
+geometry = { type = "angle", data = { vertex = [0.0, -34.64], angle = 60.0 } }
+
+[[features]]
+id = "v_tip_radius"
+role = "reference"
+geometry = { type = "arc", data = { center = [0.0, -33.14], radius = 1.5 } }
+
+[[features]]
+id = "v_opening"
+role = "functional"
+geometry = { type = "offset", data = { start = [-20.0, 0.0], end = [20.0, 0.0], angle = 90.0 } }
+
+[[features]]
+id = "shoulder_radius"
+role = "reference"
+geometry = { type = "arc", data = { center = [-15.0, -5.0], radius = 5.0 } }
+
+# Reference feature for height derivation (bottom of die body)
+[[features]]
+id = "mount_base"
+role = "reference"
+geometry = { type = "ray", data = { position = [0.0, -100.0], angle = 270.0 } }
+
+# Mount features - where die contacts riser/holder
+[[features]]
+id = "mount_shoulder"
+role = "mount"
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+geometry = { type = "ray", data = { position = [0.0, -100.0], angle = 270.0 } }
+
+[[features]]
+id = "mount_tongue"
+role = "mount"
+family = "american_precision"
+style = "tongue"
+gender = "male"
+geometry = { type = "ray", data = { position = [0.0, -120.0], angle = 270.0 } }

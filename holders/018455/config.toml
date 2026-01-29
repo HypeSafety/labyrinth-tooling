@@ -1,0 +1,65 @@
+name = "018.455 Punch Holder"
+position = "upper"
+tooling_style = "american_planer"
+machine_interface = "hydraulic"
+clamping_type = "hydraulic"
+# Available lengths in mm (inch equivalents)
+# 20"=508, 24"=609.6, 30"=762, 36"=914.4, 40"=1016, 48"=1219.2, 60"=1524, 72"=1828.8, etc.
+available_lengths = [
+    508, 508, 609.6, 609.6, 762, 762, 914.4, 914.4,
+    1016, 1016, 1219.2, 1219.2, 1524, 1828.8, 2133.6, 2438.4,
+    2540, 3048,
+]
+compatible_machines = []
+notes = "American Precision Style punch holder"
+
+[[features]]
+id = "mount_ram"
+role = "mount"
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    -0.60452,
+    50.8,
+]
+angle = 90.0
+
+[[features]]
+id = "mount_shoulder"
+role = "mount"
+family = "american_precision"
+style = "shoulder"
+gender = "female"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    0.0,
+    0.0,
+]
+angle = 270.0
+
+[[features]]
+id = "mount_tongue"
+role = "mount"
+family = "american_precision"
+style = "tongue"
+gender = "female"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+position = [
+    0.635,
+    22.606,
+]
+angle = 270.0

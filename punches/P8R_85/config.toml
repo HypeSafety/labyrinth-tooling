@@ -1,0 +1,45 @@
+name = "Radius Punch 85° P8R"
+style = "radius"
+mount_style = "american_precision"
+
+# Available segment lengths in mm (inch equivalents)
+# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
+available_lengths = [
+    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
+    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
+    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
+    406.4, 406.4, 457.2, 457.2, 508, 508,
+]
+
+# Mounting features
+[[features]]
+id = "mount_shoulder"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 139.125], angle = 90.0 } }
+family = "american_precision"
+style = "shoulder"
+gender = "male"
+
+[[features]]
+id = "mount_tongue"
+role = "mount"
+geometry = { type = "ray", data = { position = [0.0, 155.0], angle = 90.0 } }
+family = "american_precision"
+style = "tongue"
+gender = "male"
+
+# Functional features
+[[features]]
+id = "tip_contact"
+role = "functional"
+geometry = { type = "ray", data = { position = [0.0, 0.0], angle = 270.0 } }
+
+[[features]]
+id = "tip_angle"
+role = "reference"
+geometry = { type = "angle", data = { vertex = [0.0, 0.0], angle = 85.0 } }
+
+[[features]]
+id = "tip_radius"
+role = "reference"
+geometry = { type = "arc", data = { center = [0.0, 1.0], radius = 1.0 } }
