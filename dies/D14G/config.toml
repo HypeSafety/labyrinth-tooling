@@ -1,52 +1,129 @@
-name = "V-Die 88° 14ga"
-style = "v_die"
+available_lengths = [
+    25.4,
+    25.4,
+    25.4,
+    50.8,
+    50.8,
+    50.8,
+    76.2,
+    76.2,
+    76.2,
+    101.6,
+    101.6,
+    101.6,
+    127,
+    127,
+    127,
+    152.4,
+    152.4,
+    152.4,
+    203.2,
+    203.2,
+    254,
+    254,
+    304.8,
+    304.8,
+    355.6,
+    355.6,
+    406.4,
+    406.4,
+    457.2,
+    457.2,
+    508,
+    508,
+]
 mount_style = "american_precision"
 mount_type = "t_slot"
+name = "V-Die 88° 14ga"
 notes = "American Precision Style V-die for 14 gauge material"
+style = "v_die"
 
-# Available segment lengths in mm (inch equivalents)
-# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
-available_lengths = [
-    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
-    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
-    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
-    406.4, 406.4, 457.2, 457.2, 508, 508,
-]
-
-# Functional features
 [[features]]
 id = "v_opening"
 role = "functional"
-geometry = { type = "offset", data = { start = [0.0, 0.0], end = [30.16, 0.0], angle = 90.0 } }
+
+[features.geometry]
+type = "offset"
+
+[features.geometry.data]
+angle = 90
+end = [
+    23.01875,
+    0,
+]
+start = [
+    7.14375,
+    0,
+]
 
 [[features]]
 id = "v_angle"
 role = "reference"
-geometry = { type = "angle", data = { angle = 88.0 } }
+
+[features.geometry]
+type = "angle"
+
+[features.geometry.data]
+angle = 88
 
 [[features]]
 id = "v_tip_radius"
 role = "reference"
-geometry = { type = "arc", data = { center = [15.08, -56.11], radius = 0.794 } }
+
+[features.geometry]
+type = "arc"
+
+[features.geometry.data]
+center = [
+    15.08125,
+    -7.076874,
+]
+radius = 0.79375
 
 [[features]]
 id = "shoulder_radius"
 role = "reference"
-geometry = { type = "arc", data = { center = [6.81, -0.794], radius = 0.794 } }
 
-# Mount features
+[features.geometry]
+type = "arc"
+
+[features.geometry.data]
+center = [
+    6.81,
+    -0.794,
+]
+radius = 0.794
+
 [[features]]
+family = "american_precision"
+gender = "male"
 id = "mount_shoulder"
 role = "mount"
-family = "american_precision"
 style = "shoulder"
-gender = "male"
-geometry = { type = "ray", data = { position = [15.08, -56.90], angle = 270.0 } }
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+angle = 270
+position = [
+    15.08125,
+    -44.196,
+]
 
 [[features]]
+family = "american_precision"
+gender = "male"
 id = "mount_tongue"
 role = "mount"
-family = "american_precision"
 style = "tongue"
-gender = "male"
-geometry = { type = "ray", data = { position = [15.08, -72.78], angle = 270.0 } }
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+angle = 270
+position = [
+    15.08125,
+    -56.896,
+]
