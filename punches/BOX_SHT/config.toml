@@ -1,46 +1,110 @@
-name = "Short Box Punch"
-style = "box"
-mount_style = "american_precision"
-notes = "Short height box punch for shallow boxes and channels"
-
-# Available segment lengths in mm (inch equivalents)
-# 1"=25.4, 2"=50.8, 3"=76.2, 4"=101.6, 5"=127, 6"=152.4, 8"=203.2, 10"=254, 12"=304.8, etc.
 available_lengths = [
-    25.4, 25.4, 25.4, 50.8, 50.8, 50.8, 76.2, 76.2, 76.2,
-    101.6, 101.6, 101.6, 127, 127, 127, 152.4, 152.4, 152.4,
-    203.2, 203.2, 254, 254, 304.8, 304.8, 355.6, 355.6,
-    406.4, 406.4, 457.2, 457.2, 508, 508,
+    25.4,
+    25.4,
+    25.4,
+    50.8,
+    50.8,
+    50.8,
+    76.2,
+    76.2,
+    76.2,
+    101.6,
+    101.6,
+    101.6,
+    127,
+    127,
+    127,
+    152.4,
+    152.4,
+    152.4,
+    203.2,
+    203.2,
+    254,
+    254,
+    304.8,
+    304.8,
+    355.6,
+    355.6,
+    406.4,
+    406.4,
+    457.2,
+    457.2,
+    508,
+    508,
 ]
+mount_style = "american_precision"
+name = "Short Box Punch"
+notes = "Short height box punch for shallow boxes and channels"
+style = "box"
 
-# Mount features
-[[features]]
-id = "mount_shoulder"
-role = "mount"
-family = "american_precision"
-style = "shoulder"
-gender = "male"
-geometry = { type = "ray", data = { position = [-18.26, 63.40], angle = 90.0 } }
-
-[[features]]
-id = "mount_tongue"
-role = "mount"
-family = "american_precision"
-style = "tongue"
-gender = "male"
-geometry = { type = "ray", data = { position = [-18.26, 79.28], angle = 90.0 } }
-
-# Functional features
 [[features]]
 id = "tip_contact"
 role = "functional"
-geometry = { type = "ray", data = { position = [-23.81, -24.36], angle = 270.0 } }
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+angle = 270
+position = [
+    -23.8125,
+    -24.484117,
+]
 
 [[features]]
 id = "tip_angle"
 role = "reference"
-geometry = { type = "angle", data = { vertex = [-23.81, -24.36], angle = 90.0 } }
+
+[features.geometry]
+type = "angle"
+
+[features.geometry.data]
+angle = 88
 
 [[features]]
 id = "tip_radius"
 role = "reference"
-geometry = { type = "arc", data = { center = [-23.81, -23.96], radius = 0.397 } }
+
+[features.geometry]
+type = "arc"
+
+[features.geometry.data]
+center = [
+    -23.8125,
+    -24.087242,
+]
+radius = 0.396875
+
+[[features]]
+family = "american_precision"
+gender = "male"
+id = "mount_shoulder"
+role = "mount"
+style = "shoulder"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+angle = 90
+position = [
+    -23.8125,
+    50.699883,
+]
+
+[[features]]
+family = "american_precision"
+gender = "male"
+id = "mount_tongue"
+role = "mount"
+style = "tongue"
+
+[features.geometry]
+type = "ray"
+
+[features.geometry.data]
+angle = 90
+position = [
+    -23.8125,
+    63.399883,
+]
