@@ -1,0 +1,7 @@
+available_lengths = [
+    3843.3375,
+]
+mount_style = "american_precision"
+name = "Deep Heavy Box Punch"
+notes = "Deep heavy duty box punch for deep box forming"
+style = "box"

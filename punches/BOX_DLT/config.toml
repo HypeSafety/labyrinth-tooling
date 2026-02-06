@@ -1,0 +1,8 @@
+available_lengths = [
+    3308.35,
+    954.2875,
+]
+mount_style = "american_precision"
+name = "Deep Light Box Punch"
+notes = "Deep light box punch for deep box forming in lighter gauge"
+style = "box"

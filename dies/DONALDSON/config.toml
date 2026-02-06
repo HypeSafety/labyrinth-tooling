@@ -1,0 +1,8 @@
+available_lengths = [
+    3676.65,
+]
+mount_style = "american_precision"
+mount_type = "t_slot"
+name = "Donaldson Die"
+notes = "Donaldson die"
+style = "v_die"
